@@ -5,7 +5,7 @@ This query shows the list of residents available
   
 select * from Bewohner
 
-I am hungry now and tI will need to approach some vendors in the village, some are peaceful, while the rest are evil
+I am hungry now and I will need to approach some vendors in the village, some are peaceful, while the rest are evil
 So I am being careful and looking for the ones that are peaceful
 
 select * from Bewohner 
@@ -17,4 +17,14 @@ Now I am looking for a peaceful weaponsmith that can forge me a sword to prtoect
   Here we apply the "and" function to the already known filter "Where"
   
 select * from Bewohner 
-where status = "friedlich" and Beruf= "Metzger"
+where status = "friedlich" and Beruf= "Waffenschmied"
+
+This shows only one villager is a weaponsmith and is peaceful
+That is too few for options, 
+
+So now we are looking for all peaceful professionals that have the word "Smith" in their name
+  we will introduce the "Like" statement here 
+
+select * from Bewohner 
+where status = "friedlich" and Beruf like "%Schmied"
+
