@@ -1,0 +1,20 @@
+## That's you!
+## After a plane crash, you find out that you are the only survivor. You land on SQL Island and the goal of the game is to escape from this island.
+
+This query shows the list of residents available
+  
+select * from Bewohner
+
+I am hungry now and tI will need to approach some vendors in the village, some are peaceful, while the rest are evil
+So I am being careful and looking for the ones that are peaceful
+
+select * from Bewohner 
+where status = "friedlich"
+
+This showed all the villagers that are peaceful by using the filter "Where"
+
+Now I am looking for a peaceful weaponsmith that can forge me a sword to prtoect myself
+  Here we apply the "and" function to the already known filter "Where"
+  
+select * from Bewohner 
+where status = "friedlich" and Beruf= "Metzger"
